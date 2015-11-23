@@ -8,14 +8,68 @@
 # Admin
 *       /admin                                  module:crud
 
-# Landing page
-GET     /                                       Info.landing
+# Lang
+GET     /locale                                 Public.lang
 
-# About page
-GET     /about                                  Info.about
+# Landing page
+GET     /                                       Public.landing
 
 # Home page
-GET     /home                                   Waves.home
+GET     /home                                   Application.home
+
+# Sound list
+GET     /files                                  Application.files
+
+# Sound page
+GET     /stream                                 Application.streamFile
+
+# Download sound
+GET     /download                               Application.download
+
+# Upload form
+GET     /upload                                 Application.uploadForm
+
+# Upload sound
+POST    /upload                                 Application.uploadFile
+
+# Delete sound
+GET     /delete                                 Application.deleteFile
+
+# Search sound
+GET     /sounds.json                            Application.searchFile
+
+# Playlists
+GET     /playlists                              Application.playlists
+
+# Playlist
+GET     /playlist                               Application.playlist
+
+# Create playlist
+GET     /playlist/create                        Application.createPlaylist
+
+# Change playlist name
+GET     /playlist/rename                        Application.changePlaylistName
+
+# Delete playlist
+GET     /playlist/delete                        Application.deletePlaylist
+
+# Add to playlist
+GET     /playlist/add                           Application.addToPlaylist
+
+# Remove from playlist
+GET     /playlist/remove                        Application.removeFromPlaylist
+
+# Friend list
+GET     /friends                                Application.friends
+
+# Accept friend
+GET     /friends/accept                         Application.acceptFriend
+
+# Add friend
+GET     /friends/add                            Application.addFriend
+
+# Remove friend
+GET     /friends/remove                         Application.removeFriend
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
